@@ -1,260 +1,205 @@
-/* Estilo geral */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: black; /* Cor de fundo */
-    color: white; /* Cor do texto */
-  }
-  
-  /* Cabeçalho */
-  header {
-    background-color: black;
-    padding: 20px;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
-  
-  header h1 {
-    color: gold; /* Título em dourado */
-  }
-  
-  header ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  header li {
-    display: inline;
-    margin: 0 15px;
-  }
-  
-  header a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-  }
-  
-  header a:hover {
-    color: gold; /* Efeito hover */
-  }
-
-  /* Menu padrão para telas grandes */
-
-
-#menu-toggle {
-  display: none; /* Inicialmente oculto */
-  position: relative;
-  z-index: 1001; /* Certifique-se de que está acima de outros elementos */
-  background: none;
-  border: none;
-  color: white;
-  font-size: 1.5em;
-  cursor: pointer;
-}
-
-#menu {
-  display: flex;
-  justify-content: center; /* Centraliza o menu horizontalmente */
-  list-style: none;
-  padding: 0;
+/* Reset básico */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
-#menu li {
-  margin: 0 15px;
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  color: #fff;
+  background-color: #000; /* Fundo preto elegante */
 }
 
-#menu a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-}
-#menu-pequeno{
-  display: none;
-
+/* Cores */
+:root {
+  --dourado: #FFD700;
+  --preto: #000;
+  --branco: #fff;
 }
 
-  /* Seções */
-  .section {
-    padding: 50px 20px;
-    text-align: center;
-  }
-  .section img{
-    width: 350px;
-  }
-  
-  .section h2 {
-    color: gold;
-    margin-bottom: 20px;
-  }
-  
-  .section p, .section li {
-    font-size: 1.1em;
-    line-height: 1.5;
-    
-  }
-  #goals  .training-module{
-
-    border-radius: 0%;
-  }
-
-  
-  /* Módulos */
-  .training-module {
-    margin: 30px auto;
-    padding: 20px;
-    border: 1px solid gold;
-    max-width: 500px;
-    background-color: black;
-  }
-  
-  .training-module h3 {
-    color: gold;
-    margin-bottom: 15px;
-  }
-  
-  /* Estilo para os ícones */
-/* Estilo para os botões de contato */
-#contact i {
-  margin-right: 10px;
-  font-size: 1.5em; /* Tamanho dos ícones */
-}
-
-#contact a {
-  display: inline-block;
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  padding: 10px 15px;
-  border-radius: 10px;
-  margin: 10px 0;
-  transition: background-color 0.3s, transform 0.2s;
-}
-
-/* Botão do WhatsApp */
-#contact a[href*="wa.me"] {
-  background-color: #25D366; /* Cor oficial do WhatsApp */
-}
-
-#contact a[href*="wa.me"]:hover {
-  background-color: #1EBE5B; /* Cor mais escura no hover */
-}
-
-/* Botão do Instagram */
-#contact a[href*="instagram.com"] {
-  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); /* Gradiente oficial do Instagram */
-}
-
-#contact a[href*="instagram.com"]:hover {
-  background: linear-gradient(45deg, #bc1888, #cc2366, #dc2743, #e6683c, #f09433); /* Gradiente invertido no hover */
-}
-
-/* Botão de Portfólio */
-#portfolio-section {
+/* Header / Hero */
+header {
+  background: url('elaine-hero.jpg') center/cover no-repeat;
+  padding: 100px 20px;
+  color: var(--branco);
   text-align: center;
-  margin-top: 20px;
 }
 
-.portfolio-button {
-  display: inline-block;
-  text-decoration: none;
-  background-color: gold; /* Cor do botão */
-  color: black;
-  font-weight: bold;
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--dourado);
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* Botão CTA */
+.cta-button {
+  background-color: var(--dourado);
+  color: var(--preto);
   padding: 15px 30px;
-  border-radius: 10px;
-  font-size: 1.2em;
-  transition: background-color 0.3s, transform 0.2s;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
-.portfolio-button:hover {
-  background-color: #ffd700; /* Cor mais clara no hover */
-  transform: scale(1.05); /* Leve aumento no hover */
+.cta-button:hover {
+  background-color: #e6c200;
+  transform: scale(1.05);
 }
 
-.portfolio-button i {
+/* Seções gerais */
+.section {
+  padding: 60px 20px;
+  background-color: var(--preto);
+  text-align: center;
+  color: var(--branco);
+}
+
+.section:nth-child(even) {
+  background-color: #111;
+}
+
+.section h2 {
+  font-size: 1.8rem;
+  color: var(--dourado);
+  margin-bottom: 20px;
+}
+
+.section p,
+.section li {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto 20px;
+  color: var(--branco);
+}
+
+/* Imagens */
+/* Imagens */
+.elaine-img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin: 20px auto;
+  display: block;
+  border: none; /* sem borda circular */
+  border-radius: 0; /* remove o círculo */
+
+}
+
+
+/* Listas */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  padding: 10px 0;
+  border-bottom: 1px solid #444;
+  max-width: 600px;
+  margin: 0 auto;
+}
+ul li i {
+  color: gold;
   margin-right: 10px;
 }
 
 
-  /* Rodapé */
-  footer {
-    text-align: center;
-    padding: 10px;
-    background-color: black;
-    color: white;
-  }
-  
-  footer a {
-    color: gold;
-    text-decoration: none;
-  }
-  
-  footer a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Ocultar o menu e exibir o botão em telas pequenas */
-/* Ocultar o menu e exibir o botão em telas pequenas */
+/* Formulário */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+form input, form button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #666;
+  background-color: #111;
+  color: var(--branco);
+}
+
+form button {
+  background-color: var(--dourado);
+  color: var(--preto);
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+form button:hover {
+  background-color: #e6c200;
+}
+
+/* Botões WhatsApp e Instagram */
+.whatsapp-button, .instagram-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #fff;
+}
+
+.whatsapp-button {
+  background: #25D366;
+}
+
+.instagram-button {
+  background: #E1306C;
+}
+
+/* Depoimento */
+blockquote {
+  font-style: italic;
+  max-width: 700px;
+  margin: 20px auto;
+  background-color: #111;
+  padding: 20px;
+  border-left: 5px solid var(--dourado);
+  color: var(--branco);
+}
+
+/* Rodapé */
+footer {
+  background-color: #111;
+  color: var(--branco);
+  text-align: center;
+  padding: 30px 20px;
+  border-top: 2px solid var(--dourado);
+}
+
+footer p {
+  margin: 10px 0;
+  color: var(--dourado);
+}
+
+/* Responsivo */
 @media (max-width: 768px) {
-  #menu-toggle {
-    display: block;
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    color: white;
-    background: none;
-    border: none;
-    font-size: 1.5em;
-    cursor: pointer;
-    z-index: 1001;
+  header h1 {
+    font-size: 1.5rem;
   }
 
-  #menu {
-    display: none; /* Inicialmente oculto */
-    flex-direction: column; /* Itens empilhados verticalmente */
-    background-color: black;
-    position: fixed;
-    top: 60px; /* Espaço para o botão do menu */
-    right: 10px;
-    width: 90%; /* Ocupa 90% da largura da tela */
-    max-width: 300px; /* Limite de largura */
-    padding: 10px;
-    border: 1px solid gold;
-    border-radius: 5px;
-    z-index: 1000;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
+  .section h2 {
+    font-size: 1.5rem;
   }
 
-  #menu.show {
-    display: flex; /* Exibe o menu ao clicar */
-    align-items: flex-start; /* Alinhamento superior */
-  }
-
-  #menu li {
-    margin: 10px 0; /* Espaçamento vertical entre itens */
-  }
-
-  #menu a {
-    display: block; /* Torna o link clicável na área inteira */
-    padding: 10px 15px; /* Melhor área clicável */
-    border-radius: 5px;
-    text-align: left;
-  }
-
-  #menu a:hover {
-    background-color: gold; /* Fundo dourado no hover */
-    color: black; /* Texto preto no hover */
-  }
-
-  #menu-pequeno {
-    display: inline-block;
-    margin-right: auto;
-    color: gold;
-    font-size: 1.2em;
-    margin-bottom: 10px;
+  .cta-button {
+    padding: 12px 20px;
+    font-size: 1rem;
   }
 }
